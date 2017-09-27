@@ -16,7 +16,7 @@ binombase = function(n, k){
 #' @param n object of class vli or 32 bits integer
 #' @param k object of class vli or 32 bits integer
 #' @return object of class vli
-#' @description \code{binom} computes binomial coefficients of vli (Very Large Integers) objects. That is, given two positive integers \code{n} and \code{k} whith \code{n >= k}, the function \code{binom(n, k)} returns the number of ways to choose a subset of \code{k} elements, disregarding their order, from a set of \code{n} elements.
+#' @description \code{binom} computes binomial coefficients of vli (Very Large Integers) objects. That is, given two positive integers \code{n} and \code{k} with \code{n >= k}, the function \code{binom(n, k)} returns the number of ways to choose a subset of \code{k} elements, disregarding their order, from a set of \code{n} elements.
 #' @examples x <- as.vli("1000")
 #' binom(x, 200)
 #' @name 06. Binomial coefficients

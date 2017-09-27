@@ -28,7 +28,7 @@ list of 3 objects of class vli: the first is the greatest common divisor of \cod
 Computation of the Extended Euclidean algorithm for vli (Very Large Integers) objects. Given two positive integers, \code{x} and \code{y}, the Extended Euclidean algorithm looks for two integers \code{a} and \code{b} (called Bezout's coefficients) such that \code{(a * x) + (b * y) = 1}. To do this, the algorithm needs to compute the greatest common divisor of \code{x} and \code{y}, so it is also returned by the function.
 }
 \details{
-The returned object is a list of 3 elements. To access the numbers, it is needed to use the list operator \code{[[i]]}, where "\code{i}" has to be 1 for the greatest common divisor, 2 for the first Bezout coefficient and 3 for the second Bezout coefficient (see the example).
+The returned object is a list of 3 elements. To access the numbers, it is necessary to use the list operator \code{[[i]]}, where "\code{i}" has to be 1 for the greatest common divisor, 2 for the first Bezout coefficient and 3 for the second Bezout coefficient (see the example).
 }
 \examples{
 x <- as.vli("232636113097")

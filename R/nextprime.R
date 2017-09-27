@@ -33,7 +33,7 @@ nextprimebase <- function(n, iter, test){
 #' @author Javier Leiva Cuadrado
 #' @param n object of class vli or 32 bits integer
 #' @param iter number of iterations for testing whether or not each number is prime; numeric
-#' @param test chosen test: "F" for the Fermat Test, "SS" for the Solovay-Strassen Test or "MR" (by default) for the Miller-Rabin Test; characte
+#' @param test chosen test: "F" for the Fermat Test, "SS" for the Solovay-Strassen Test or "MR" (by default) for the Miller-Rabin Test; character
 #' @return object of class vli
 #' @description The function \code{nextprime} computes and returns the smallest prime number that is greater than the given number.
 #' @details The number of iterations is configurable to set the desired accuracy. A small number of iterations might cause not finding a prime number.

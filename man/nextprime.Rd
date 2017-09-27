@@ -21,7 +21,7 @@ nextprime(n, iter = 10, test = "MR")
 
 \item{iter}{number of iterations for testing whether or not each number is prime; numeric}
 
-\item{test}{chosen test: "F" for the Fermat Test, "SS" for the Solovay-Strassen Test or "MR" (by default) for the Miller-Rabin Test; characte}
+\item{test}{chosen test: "F" for the Fermat Test, "SS" for the Solovay-Strassen Test or "MR" (by default) for the Miller-Rabin Test; character}
 }
 \value{
 object of class vli

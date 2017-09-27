@@ -57,7 +57,7 @@ Basic arithmetic and logical operators for vli (Very Large Integers) objects.
 \details{
 As in the creation of vli objects (through the function \code{as.vli}), punctuation signs will be ignored (see the last example).
 
-The algorithm implemented for the operator "\code{*}" computes the product with a trivial method when imputs have less than 40 digits and with the Karatsuba algorithm for fast multiplications when they are larger.
+The algorithm implemented for the operator "\code{*}" computes the product with a trivial method when imput numbers have less than 40 digits and with the Karatsuba algorithm for fast multiplications when they are larger.
 }
 \examples{
 x <- as.vli("712376544526091241")

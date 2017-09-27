@@ -50,7 +50,7 @@ is.vli(x)
 \item{m}{number of vli objects being initialized; numeric}
 }
 \description{
-vli is a S3 class that allows to store and operate with arbitrarily large integers. Each object of class vli has 3 attributes: \code{sign}, \code{length} and \code{value} that can be accesed as showed in the examples. The (absolute) value of the number is stored in a vector to avoid truncation.
+vli is a S3 class that allows to store and operate with arbitrarily large integers. Each object of class vli has 3 attributes: \code{sign}, \code{length} and \code{value} which can be accesed as shown in the examples. The (absolute) value of the number is stored in a vector to avoid truncation.
 }
 \details{
 In \code{as.vli(n)}, if \code{n} is numeric, it must be a 32 bits integer to avoid the loss of precision. The idea is to use numeric objects only for small numbers. In other case, character objects are prefered.

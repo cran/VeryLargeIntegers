@@ -37,7 +37,7 @@ is.perfectpow(x)
 \code{perfectpow(x)} returns a list of two objects of class vli
 }
 \description{
-A positive integer is a perfect power if it can be expressed as an integer power of another positive integer. That is, a positive integer \code{x} is a perfect power if it there exist two positive integers \code{a} and \code{b} such that \code{x = a^b} (note that \code{a} and \code{b} might not be unique).
+A positive integer is a perfect power if it can be expressed as an integer power of another positive integer. That is, a positive integer \code{x} is a perfect power if there exist two positive integers \code{a} and \code{b} such that \code{x = a^b} (note that \code{a} and \code{b} might not be unique).
 }
 \details{
 The function \code{is.perfectpow(x)} returns \code{TRUE} if there exist two positive integers \code{a} and \code{b} such that \code{x = a^b}, and returns \code{FALSE} if there not exist.
