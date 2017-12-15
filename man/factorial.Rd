@@ -26,8 +26,10 @@ object of class vli
 \code{factvli} computes and returns the factorial of a vli (Very Large Integers) object. Given a positive integer \code{n}, the factorial of \code{n}, \code{n!}, is defined as the product of all the positive integers from \code{1} to \code{n}.
 }
 \examples{
+\dontrun{
 n <- as.vli("420")
 factvli(n)
+}
 }
 \author{
 Javier Leiva Cuadrado

@@ -9,20 +9,10 @@
 #' @return object of class vli
 #' @description \code{divp2} efficiently divides an object of class vli by a power of 2.
 #' @details Given two integers \code{x} (vli or 32 bits integer) and \code{k} (32 bits integer), the function \code{divp2(x, k)} computes and returns \code{x/(2^k)} as an object of class vli.
-#' @examples # Dividing 100 times a random 500 digits integer by 2^10 = 1024
-#'
-#'x <- rvlidigits(500)
-#'x
-#'
-#'## Division operator
-#'t = Sys.time()
-#'for (i in 1:100) x / 1024
-#'Sys.time() - t
-#'
-#'## divp2 function
-#'t = Sys.time()
-#'for (i in 1:100) divp2(x, 10)
-#'Sys.time() - t
+#' @examples # Dividing a random 500 digits integer by 2^10 = 1024
+#' x <- rvlidigits(500)
+#' x
+#' divp2(x, 10)
 #' @name 05. Efficent division by a power of 2
 #' @rdname divp2
 #' @method divp2 vli

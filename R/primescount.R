@@ -31,14 +31,17 @@ countbase <- function(n, iter, bar){
 #' @param iter number of iterations for each number being tested; numeric
 #' @param bar to choose if display or not a progress bar; boolean
 #' @description The function \code{primescount} returns the number of primes found up to a given bound. The implemented algorithm uses the Miller-Rabin Primality Test to determine whether a number is prime or not. The number of iterations is configurable, to set the desired accuracy.
-#' @examples ## Counting primes up to 200
+#' @examples
+#' \dontrun{
+#' ## Counting primes up to 200
 #' primescount(n = 200, iter = 10, bar = TRUE)
 #'
-#'## Computing the approximation of pi(x)
+#' ## Computing the approximation of pi(x)
 #' pi(200)
 #'
-#'## Showing the numbers by using the Solovay-Strassen test
+#' ## Showing the numbers by using the Solovay-Strassen test
 #' primes(n = 200, iter = 10, test = "SS", bar = TRUE)
+#' }
 #' @name 22. Counting the number of primes
 #' @rdname primescount
 #' @export primescount

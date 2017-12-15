@@ -26,8 +26,11 @@ divisorbase <- function(n, iter){
 #' @return object of class vli
 #' @description \code{divisor} returns a randomly chosen divisor of a given number.
 #' @details The algorithm determines if the given number is prime or composite by usign the Miller-Rabin Probabilistic Primality Test. If it is prime, it returns the number itself. If it is composite, it returns a randomly chosen divisor. The number of iterations is configurable to set the desired accuracy. A too low number of iterations could cause an infinite loop because of being looking for a divisor of a prime number.
-#' @examples x <- as.vli("710387")
-#' divisor(x, iter = 1000)
+#' @examples r <- rvliprime(100)
+#' r
+#' x <- r * 51
+#' x
+#' divisor(x, iter = 100)
 #' @name 14. Finding a random divisor
 #' @rdname divisor
 #' @export divisor

@@ -38,7 +38,8 @@ factorsbase <- function(n, iter, output){
 #' It determines if the given number is prime or composite by usign the Miller-Rabin Probabilistic Primality Test. If it is prime, it returns the number itself. If it is composite, it calls iteratively the \code{divisor} function until all the prime factors of the given number are found.
 #'
 #' It is a Monte Carlo method, therefore it is not deterministic. The number of iterations is configurable, to set the desired accuracy. A too low number of iterations could cause an infinite loop because of being looking for a divisor of a prime number.
-#' @examples x <- as.vli("584843")
+#' @examples
+#' x <- as.vli("584843")
 #' factors(x, iter = 100)
 #' @name 15. Factorization
 #' @rdname factors

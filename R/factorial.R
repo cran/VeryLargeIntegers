@@ -7,8 +7,11 @@
 #' @param n object of class vli or 32 bits integer
 #' @return object of class vli
 #' @description \code{factvli} computes and returns the factorial of a vli (Very Large Integers) object. Given a positive integer \code{n}, the factorial of \code{n}, \code{n!}, is defined as the product of all the positive integers from \code{1} to \code{n}.
-#' @examples n <- as.vli("420")
+#' @examples
+#' \dontrun{
+#' n <- as.vli("420")
 #' factvli(n)
+#' }
 #' @name 07. Factorial
 #' @rdname factorial
 #' @export factvli

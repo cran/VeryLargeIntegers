@@ -11,8 +11,7 @@
 #' @details The implemented algorithm is based in the fact that \code{x/log(x)} is asymptotically equal to \code{pi(x)}, also known as "Prime Number Theorem".
 #'
 #' Closer approximations could be implemented by using the Logarithmic Integral Function. The function \code{countprimes} of the present package is another way to get a better approximation (in return for a less efficient computation) of \code{pi(x)}. Alhought the algorithm is not deterministic, it is based in the Miller-Rabin Probabilistic Primality Test, therefore the error can be arbitrarily reduced.
-#' @examples
-#' x <- as.vli("89235489145293876129784691")
+#' @examples x <- as.vli("89235489145293876129784691")
 #' pi(x)
 #' @name 21. Pi function
 #' @rdname Pi

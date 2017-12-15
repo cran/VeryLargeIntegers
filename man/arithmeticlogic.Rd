@@ -63,7 +63,6 @@ The algorithm implemented for the operator "\code{*}" computes the product with 
 x <- as.vli("712376544526091241")
 x ^ 61
 x / as.vli("4225234")
-x \\\%\\\%  as.vli("923485623812")
 x > -x
 x <= 10000000
 13.2415 - as.vli(132415)

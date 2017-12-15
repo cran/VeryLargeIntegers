@@ -27,8 +27,11 @@ phibase <- function(x){
 #' @return object of class vli
 #' @description Euler's Phi Function for vli (Very Large Integers) objects. Given a positive integer \code{x}, the Euler's Phi Function returns the number of positive integers up to \code{x} that are relatively prime to \code{x}.
 #' @details The returned value by the \code{phi} function is equal to the order of the group of units of the ring \code{Z/Zn} (the multiplicative group of integers modulo \code{n}). It is also called Euler's Totient Function, and plays a major part in Number Theory and in the RSA Cryptosystem.
-#' @examples x <- as.vli("78573011")
+#' @examples
+#' \dontrun{
+#' x <- as.vli("24352")
 #' phi(x)
+#' }
 #' @name 17. Euler's phi function
 #' @rdname Euler
 #' @export phi

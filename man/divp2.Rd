@@ -31,20 +31,10 @@ object of class vli
 Given two integers \code{x} (vli or 32 bits integer) and \code{k} (32 bits integer), the function \code{divp2(x, k)} computes and returns \code{x/(2^k)} as an object of class vli.
 }
 \examples{
-# Dividing 100 times a random 500 digits integer by 2^10 = 1024
-
+# Dividing a random 500 digits integer by 2^10 = 1024
 x <- rvlidigits(500)
 x
-
-## Division operator
-t = Sys.time()
-for (i in 1:100) x / 1024
-Sys.time() - t
-
-## divp2 function
-t = Sys.time()
-for (i in 1:100) divp2(x, 10)
-Sys.time() - t
+divp2(x, 10)
 }
 \author{
 Javier Leiva Cuadrado

@@ -27,6 +27,7 @@ primescount(n, iter = 10, bar = TRUE)
 The function \code{primescount} returns the number of primes found up to a given bound. The implemented algorithm uses the Miller-Rabin Primality Test to determine whether a number is prime or not. The number of iterations is configurable, to set the desired accuracy.
 }
 \examples{
+\dontrun{
 ## Counting primes up to 200
 primescount(n = 200, iter = 10, bar = TRUE)
 
@@ -35,6 +36,7 @@ pi(200)
 
 ## Showing the numbers by using the Solovay-Strassen test
 primes(n = 200, iter = 10, test = "SS", bar = TRUE)
+}
 }
 \author{
 Javier Leiva Cuadrado

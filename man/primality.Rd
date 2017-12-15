@@ -81,6 +81,7 @@ The Miller-Rabin Primality Test is a more sophisticated version of the Fermat te
 The Solovay-Strassen test is based in a known algebraic property of the Jacobi symbol. The probabily of failure is also less than \code{1/2^k}, where \code{k} is the number of computed iterations. However, unlike it happens with the Fermat test, there are not odd composite numbers that can not be detected with enough iterations of the Solovay-Strassen test.
 }
 \examples{
+\dontrun{
 ## Testing a 32 bits integer using the Miller-Rabin Test
 is.primeMR(2845127, iter = 10)
 
@@ -91,6 +92,7 @@ is.primeF(x, iter = 100)
 ## Testing the same object of class vli using the general
 ##     is.prime function and the Solovay-Strassen Test
 is.prime(x, iter = 100, test = "SS")
+}
 }
 \author{
 Javier Leiva Cuadrado

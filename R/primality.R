@@ -38,7 +38,9 @@ is.primeFbase <- function(x, iter){
 #' Each iteration randomly pick an integer \code{a}. The more iterations are computed, the greater probability to find an \code{a} that does not verify such conditions and, therefore, it reveals that \code{p} is composite. However, there are some composite numbers \code{p} that have the property that \code{a^(p-1) = 1 }(\code{mod p}) for every \code{a} coprime to \code{p}. These numbers are called Carmichael numbers or Fermat pseudoprimes, and it is not possible for the Fermat Test to detect that they are composite numbers. But there are only 105212 such numbers up to \code{10^15} (approximately 1 Carmichael number per each 10.000.000.000 integer numbers). The first five are: 561, 1105, 1729, 2465 and 2821.
 #'
 #' As a conclusion, we can say that if the chosen \code{x} number is prime, the Fermat test returns \code{TRUE}. If it is an odd composite (but not a Carmichael number), it returns \code{FALSE} with probability at least \code{1/2^k}, where \code{k} is the number of computed iterations.
-#' @examples ## Testing a 32 bits integer using the Miller-Rabin Test
+#' @examples
+#' \dontrun{
+#' ## Testing a 32 bits integer using the Miller-Rabin Test
 #' is.primeMR(2845127, iter = 10)
 #'
 #' ## Testing an object of class vli using the Fermat Test
@@ -48,6 +50,7 @@ is.primeFbase <- function(x, iter){
 #' ## Testing the same object of class vli using the general
 #' ##     is.prime function and the Solovay-Strassen Test
 #' is.prime(x, iter = 100, test = "SS")
+#' }
 #' @name 18. Probabilistic primality tests
 #' @rdname primality
 #' @export is.primeF
