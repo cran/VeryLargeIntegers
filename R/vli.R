@@ -4,7 +4,7 @@
 #' @title Very Large Integers Basics
 #' @author Javier Leiva Cuadrado
 #' @param n value for the vli object being created; character or numeric
-#' @description vli is a S3 class that allows to store and operate with arbitrarily large integers. Each object of class vli has 3 attributes: \code{sign}, \code{length} and \code{value} which can be accesed as shown in the examples. The (absolute) value of the number is stored in a vector to avoid truncation.
+#' @description vli is a S3 class that allows to store and operate with arbitrarily large integers. Each object of class vli has 3 attributes (\code{sign}, \code{length} and \code{value}) that can be accessed as shown in the examples. The (absolute) value of the number is stored in a numeric vector to avoid truncation.
 #' @details In \code{as.vli(n)}, if \code{n} is numeric, it must be a 32 bits integer to avoid the loss of precision. The idea is to use numeric objects only for small numbers. In other case, character objects are prefered.
 #' The function \code{as.integer(x)}, where \code{x} a vli object, only works when the absolute value of \code{x} is up to 2.147.483.648 (32 bits). In other case it returns an error.
 #' The function \code{asnumeric(x)} could cause loss of precision if the value of \code{x} is big.
