@@ -1,4 +1,4 @@
-e2e964d8e338c9c53b289b76fc872347 *DESCRIPTION
+5d56c6c1fcf45eed4fc67cf94958c4ac *DESCRIPTION
 9a3882a62d34074b31883f1f1bcc6894 *NAMESPACE
 eb7e0e767299da4800ed14821f621ddd *R/Euler.R
 b039297dfdf84896c8ad27e4750f43a7 *R/Fibonacci.R
@@ -24,7 +24,7 @@ f2950de0457b52ee9210beb061df7187 *R/pi.R
 11e8f652364524da453461159e6ae7a9 *R/primes.R
 4faa5a0436a67470139db0022c9af839 *R/primescount.R
 be65f9ccf20f86983fc8e3c7a0449101 *R/random.R
-a915b9084305f263da958c5ebf9c41df *R/roots.R
+0f570d4fcb5b52a4babba59f2757d6ae *R/roots.R
 6bf20b9b519e19d698bb87447e5d7f68 *R/vli.R
 90e20e79194e5dfecfa11a17de6170f9 *R/zzz.R
 0418f88f8be0df7843216a524524289e *man/Euler.Rd
@@ -50,7 +50,7 @@ c15be0515ed4e8cfa96fe1a2a48874d6 *man/modarithmeticop.Rd
 6101f228b05e99550fe89a136c2ed9b5 *man/primes.Rd
 906b937aab0d7956dfe3c1a802dc2d9d *man/primescount.Rd
 86bf01ef6d9c141dfd071439399e7d9f *man/random.Rd
-f608252c7937a418108822c508653246 *man/roots.Rd
+f8f3327ff1e7d48c77e76d3edc44555d *man/roots.Rd
 277802f41c2e7347571fa3c003cb3aee *man/vli.Rd
 3eed17997d86b56fbe9dfd669a25c6bd *src/RcppExports.cpp
 dcf2b3e16ec51b71aa514751412fab2a *src/vliC.cpp

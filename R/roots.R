@@ -13,7 +13,9 @@
 #' sqrt(x)
 #' sqrtrem(x)
 #' sqrt(x)^2 + sqrtrem(x) == x
+#' \dontrun{
 #' rootk(as.vli("1492346293864978561249785"), 5)
+#' }
 #' @name 03. Roots
 #' @rdname roots
 #' @method sqrt vli
