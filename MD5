@@ -1,4 +1,4 @@
-5d56c6c1fcf45eed4fc67cf94958c4ac *DESCRIPTION
+3ea78841dbb503781b9f0eef196652cc *DESCRIPTION
 9a3882a62d34074b31883f1f1bcc6894 *NAMESPACE
 eb7e0e767299da4800ed14821f621ddd *R/Euler.R
 b039297dfdf84896c8ad27e4750f43a7 *R/Fibonacci.R
@@ -52,5 +52,5 @@ c15be0515ed4e8cfa96fe1a2a48874d6 *man/modarithmeticop.Rd
 86bf01ef6d9c141dfd071439399e7d9f *man/random.Rd
 f8f3327ff1e7d48c77e76d3edc44555d *man/roots.Rd
 277802f41c2e7347571fa3c003cb3aee *man/vli.Rd
-3eed17997d86b56fbe9dfd669a25c6bd *src/RcppExports.cpp
-dcf2b3e16ec51b71aa514751412fab2a *src/vliC.cpp
+046d0c4e09d647b435aeea4f04093be0 *src/RcppExports.cpp
+050e646d2a752ce742df6c4558b93926 *src/vliC.cpp

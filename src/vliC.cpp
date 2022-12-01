@@ -61,7 +61,7 @@ String zerossC(String x){
 IntegerVector zerosvC(IntegerVector x){
   IntegerVector a = x;
   int n = a.size();
-  while ((n>1) & (a[0] == 0)){
+  while ((n>1) && (a[0] == 0)){
     IntegerVector b(n-1);
     for (int i = 0; i < (n-1); i = i + 1){
       b[i] = a[i+1];
@@ -117,7 +117,7 @@ IntegerVector selC(IntegerVector a, int n, int m){
   else if(n>la){n=la;}
   if (m<0){m=0;}
   else if(m>la){m = la;}
-  if ((n == m) & (n == 0)){
+  if ((n == m) && (n == 0)){
     return(IntegerVector::create(0));
   }
   else if (n>=m){m=n+1;}
@@ -377,7 +377,7 @@ int compareC(List x, List y){
   int l = a.size();
   int t = 0;
   int i=0;
-  while ((t == 0) & (i<l)){
+  while ((t == 0) && (i<l)){
     if (sx*a[i] > sy*b[i]) {
       t = 1;
     }
@@ -406,13 +406,13 @@ bool ltC(List x, List y){
 // [[Rcpp::export]]
 bool geqC(List x, List y){
   int t = compareC(x,y);
-  return((t == 0) | (t == 1));
+  return((t == 0) || (t == 1));
 }
 
 // [[Rcpp::export]]
 bool leqC(List x, List y){
   int t = compareC(x,y);
-  return((t == 0) | (t == 2));
+  return((t == 0) || (t == 2));
 }
 
 // [[Rcpp::export]]
@@ -424,7 +424,7 @@ bool eqC(List x, List y){
 // [[Rcpp::export]]
 bool neqC(List x, List y){
   int t = compareC(x,y);
-  return((t == 1) | (t == 2));
+  return((t == 1) || (t == 2));
 }
 
 // [[Rcpp::export]]
@@ -536,7 +536,7 @@ List divbaseC(List x, List y){
   IntegerVector r2 = r[2];
   IntegerVector b2 = b[2];
   /* trivial case */
-  if ((r2.size() == 1) & (b2.size() == 1)){
+  if ((r2.size() == 1) && (b2.size() == 1)){
     int r20 = r2[0];
     int b20 = b2[0];
     int q = trunc(r20/ b20);
@@ -639,7 +639,7 @@ List expC(List x, List n){
     }
     /* sign */
     IntegerVector k2 = k[2];
-    if ((sa == -1) & (k2[k2.size()-1] % 2 == 1)){
+    if ((sa == -1) && (k2[k2.size()-1] % 2 == 1)){
       out[0] = -1;
     }
     return(out);

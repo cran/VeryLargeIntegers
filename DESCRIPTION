@@ -1,7 +1,7 @@
 Package: VeryLargeIntegers
 Type: Package
 Title: Store and Operate with Arbitrarily Large Integers
-Version: 0.1.8
+Version: 0.1.9
 Author: Javier Leiva Cuadrado
 Maintainer: Javier Leiva Cuadrado <jleivacuadrado@gmail.com>
 Description: Multi-precision library that allows to store and operate with arbitrarily big integers without
@@ -14,11 +14,10 @@ Description: Multi-precision library that allows to store and operate with arbit
       - Random generators of diferent types of integers.
 License: GPL
 Encoding: UTF-8
-LazyData: true
 Imports: Rcpp (>= 0.12.9)
 LinkingTo: Rcpp
 RoxygenNote: 6.0.1
 NeedsCompilation: yes
-Packaged: 2020-01-28 11:21:12 UTC; ce998
+Packaged: 2022-12-01 13:31:30 UTC; Javier
 Repository: CRAN
-Date/Publication: 2020-01-29 09:50:12 UTC
+Date/Publication: 2022-12-01 14:00:02 UTC
