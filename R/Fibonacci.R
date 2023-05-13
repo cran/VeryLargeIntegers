@@ -117,7 +117,7 @@ nthFibonacci.default <- function(n) stop("n has to be a vli object or a 32 bits 
 nthFibonacci.numeric <- function(n){
   if ( abs(n) < 2147483648){
     if ( n < 1 ) stop("n has to be greater than zero")
-    n = vliC(toString(n))
+    n = vliC(toString(as.integer(n)))
   }
   else stop("The object passed as argument is neither a vli object nor a 32 bits integer")
   nthFibobase(n)
@@ -165,7 +165,7 @@ is.Fibonacci.default <- function(x) stop("x has to be a vli object or a 32 bits 
 is.Fibonacci.numeric <- function(x){
   if ( abs(x) < 2147483648 ){
     if ( x < 0 ) stop("x has to be a positive integer")
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The object passed as argument is neither a vli object nor a 32 bits integer")
   is.Fibobase(x)

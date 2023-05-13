@@ -52,14 +52,14 @@ rootkrem(x, k)
 object of class vli
 }
 \description{
-Computation of integer roots and their remainders of vli (Very Large Integers) objects. Functions \code{sqrt} and \code{rootk} return respectively the integer square root and the integer k-th root of the given value. Functions \code{sqrtrem} and \code{rootkrem} return the corresponding remainder.
+Computation of integer roots and their remainders of vli (Very Large Integers) objects. Functions \code{sqrt} and \code{rootk} returns respectively the integer square root and the integer k-th root of the given value. Functions \code{sqrtrem} and \code{rootkrem} returns the corresponding remainder.
 }
 \examples{
-\dontrun{
 x <- as.vli("4124135")
 sqrt(x)
 sqrtrem(x)
 sqrt(x)^2 + sqrtrem(x) == x
+\dontrun{
 rootk(as.vli("1492346293864978561249785"), 5)
 }
 }

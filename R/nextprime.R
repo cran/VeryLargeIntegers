@@ -62,7 +62,7 @@ nextprime.default <- function(n, iter=10, test='MR') stop("The object n passed a
 nextprime.numeric <- function(n, iter=10, test='MR'){
   if ( abs(n) < 2147483648 ){
     if ( n > 1 ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
     }
     else stop("n has to be greater than one")
   }

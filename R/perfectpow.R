@@ -66,7 +66,7 @@ perfectpow.default <- function(x) stop("x has to be passed as vli object or 32 b
 #'
 perfectpow.numeric <- function(x){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   perfectpowbase(x)
@@ -98,7 +98,7 @@ is.perfectpow.default <- function(x) stop("x has to be passed as vli object or 3
 #'
 is.perfectpow.numeric <- function(x){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   neqC( perfectpowbase(x)[[1]], .pkgenv$zero)

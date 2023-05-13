@@ -61,7 +61,7 @@ primescount.default <- function(n, iter=10, bar = TRUE) stop("n has to be specif
 primescount.numeric <- function(n, iter=10, bar = TRUE){
   if ( abs(n) < 2147483648 ){
     if ( n > 1 ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
     }
     else stop("n has to be greater than one")
   }

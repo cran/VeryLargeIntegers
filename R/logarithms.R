@@ -26,7 +26,7 @@
 log10.vli = function(x){
   if ( ltC(x, .pkgenv$one) ) stop("log10 is only defined for positive integer values")
   if ( eqC(x, .pkgenv$one) ) return(.pkgenv$zero)
-  vliC(toString(x$length - 1))
+  vliC(toString(as.integer(x$length - 1)))
 }
 
 
@@ -49,7 +49,7 @@ log10rem.default <- function(x) stop("The x object passed as argument is neither
 #'
 log10rem.numeric <- function(x){
   if( (abs(x) < 2147483648) & (x > 0) ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
     if ( ltC(x, .pkgenv$one) ) stop("log10rem is only defined for positive integer numbers")
     subC(x, expC((vlivC(1, c(10))), log10(x)) )
   }
@@ -77,7 +77,7 @@ log.vli = function(x, base){
   if ( !is.vli(base) ){
     if ( is.numeric(base) & (abs(base) < 2147483648) ){
       if ( base > 0 ){
-        base = vliC(toString(base))
+        base = vliC(toString(as.integer(base)))
       }
       else stop("log.vli is only defined for positive integer base")
     }
@@ -85,7 +85,7 @@ log.vli = function(x, base){
   }
   if ( ltC(x, .pkgenv$one) ) stop("log.vli is only defined for positive integer numbers")
   if ( eqC(x, .pkgenv$one) ) return(.pkgenv$zero)
-  if ( eqC(base, vlivC(1,c(10))) ) return(vliC(toString(x$length - 1)))
+  if ( eqC(base, vlivC(1,c(10))) ) return(vliC(toString(as.integer(x$length - 1))))
   n = .pkgenv$zero
   t = .pkgenv$one
   while ( gtC(x, t) ){
@@ -117,14 +117,14 @@ logrem.numeric <- function(x, base){
   if ( !is.vli(base) ){
     if ( is.numeric(base) & (abs(base) < 2147483648) ){
       if ( base > 0 ){
-        base = vliC( toString(base) )
+        base = vliC( toString(as.integer(base)) )
       }
       else stop("logrem is only defined for positive integer base")
     }
     else stop("The base object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if( (abs(x) < 2147483648) & (x > 0) ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
     if ( ltC(x, .pkgenv$one) ) stop("logrem is only defined for positive integer numbers")
     subC(x, expC((base), log(x, base)) )
   }
@@ -139,7 +139,7 @@ logrem.vli <- function(x, base){
   if ( !is.vli(base) ){
     if ( is.numeric(base) & (abs(base) < 2147483648) ){
       if ( base > 0 ){
-        base = vliC( toString(base) )
+        base = vliC( toString(as.integer(base)) )
       }
       else stop("logrem is only defined for positive integer base")
     }
@@ -169,10 +169,10 @@ loge.default <- function(x) stop("The x object passed as argument is neither a v
 #'
 loge.numeric <- function(x){
   if( (abs(x) < 2147483648) & (x > 0) ){
-    x = vliC(toString(trunc(x)))
+    x = vliC(toString(as.integer(trunc(x))))
     if ( ltC(x, .pkgenv$one) ) stop("loge is only defined for positive integer values")
     if ( eqC(x, .pkgenv$one) ) return(.pkgenv$zero)
-    vliC(toString(trunc(log(as.numeric(collapseC(x$value)),base=exp(1)))))
+    vliC(toString(as.integer(trunc(log(as.numeric(collapseC(x$value)),base=exp(1))))))
   }
   else stop("loge is only defined for positive integer numbers")
 }
@@ -184,5 +184,5 @@ loge.numeric <- function(x){
 loge.vli <- function(x){
   if ( ltC(x, .pkgenv$one) ) stop("loge is only defined for positive integer values")
   if ( eqC(x, .pkgenv$one) ) return(.pkgenv$zero)
-  vliC(toString(trunc(log(as.numeric(collapseC(x$value)),base=exp(1)))))
+  vliC(toString(as.integer(trunc(log(as.numeric(collapseC(x$value)),base=exp(1))))))
 }

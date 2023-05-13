@@ -62,7 +62,7 @@ exteuclid.default <- function(x, y) stop("x and y have to be specified as vli ob
 exteuclid.numeric <- function(x, y){
   if ( abs(x) < 2147483648 ){
     if ( x >= 0 ){
-      x = vliC(toString(x))
+      x = vliC(toString(as.integer(x)))
     }
     else stop("exteuclid is only defined for positive integer numbers")
   }
@@ -70,7 +70,7 @@ exteuclid.numeric <- function(x, y){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
       if ( y >= 0 ){
-        y = vliC(toString(y))
+        y = vliC(toString(as.integer(y)))
       }
       else stop("exteuclid is only defined for positive integer numbers")
     }
@@ -89,7 +89,7 @@ exteuclid.vli <- function(x, y){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
       if ( y >= 0 ){
-        y = vliC(toString(y))
+        y = vliC(toString(as.integer(y)))
       }
       else stop("exteuclid is only defined for positive integer numbers")
     }

@@ -53,7 +53,7 @@ bininput = function(x, y){
   else if ( input == 2 ) sumC(x, y)
   else if ( input == 3 ) sumC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6) sumC(vliC(toString(x)), y)
+  else if ( input == 6) sumC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -69,9 +69,9 @@ bininput = function(x, y){
     x
   }
   else if ( input == 2) subC(x, y)
-  else if ( input == 3) subC(x, vliC(toString(y)))
+  else if ( input == 3) subC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) subC(vliC(toString(x)), y)
+  else if ( input == 6 ) subC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -84,9 +84,9 @@ bininput = function(x, y){
   if ( input == 2 ){
     return(mulbaseC(x, y))
   }
-  else if ( input == 3) return(mulbaseC(x, vliC(toString(y))) )
+  else if ( input == 3) return(mulbaseC(x, vliC(toString(as.integer(y)))) )
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6) return(mulbaseC(vliC(toString(x)), y))
+  else if ( input == 6) return(mulbaseC(vliC(toString(as.integer(x))), y))
   else if ( input == 7 | input == 8) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -105,12 +105,12 @@ bininput = function(x, y){
   }
   else if ( input == 3 ){
     if ( y == 0 ) stop("division-by-zero error")
-    else return(divbaseC(x, vliC(toString(y)))[[1]])
+    else return(divbaseC(x, vliC(toString(as.integer(y))))[[1]])
   }
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
   else if ( input == 6 ){
     if ( y$value == c(0) ) stop("division-by-zero error")
-    else return(divbaseC(vliC(toString(x)), y)[[1]])
+    else return(divbaseC(vliC(toString(as.integer(x))), y)[[1]])
   }
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
@@ -122,9 +122,9 @@ bininput = function(x, y){
 '%%.vli' = function(x, y){
   input = bininput(x, y)
   if (input == 2) return(divbaseC(x, y)[[2]])
-  else if ( input == 3 ) return(divbaseC(x,vliC(toString(y)))[[2]])
+  else if ( input == 3 ) return(divbaseC(x, vliC(toString(as.integer(y))))[[2]])
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) return(divbaseC(vliC(toString(x)), y)[[2]])
+  else if ( input == 6 ) return(divbaseC(vliC(toString(as.integer(x))), y)[[2]])
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -144,9 +144,9 @@ bininput = function(x, y){
 '^.vli' = function(x, y){
   input = bininput(x, y)
   if ( input == 2 ) expC(x,y)
-  else if ( input == 3 ) expC(x, vliC(toString(y)))
+  else if ( input == 3 ) expC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer number")
-  else if ( input == 6 ) expC(vliC(toString(x)), y)
+  else if ( input == 6 ) expC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer number")
 }
 
@@ -161,9 +161,9 @@ bininput = function(x, y){
 '>.vli' <- function(x, y){
   input = bininput(x, y)
   if ( input == 2 ) gtC(x, y)
-  else if ( input == 3 ) gtC(x, vliC(toString(y)))
+  else if ( input == 3 ) gtC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) gtC(vliC(toString(x)), y)
+  else if ( input == 6 ) gtC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -174,9 +174,9 @@ bininput = function(x, y){
 '<.vli' <- function(x, y){
   input = bininput(x, y)
   if ( input == 2) ltC(x, y)
-  else if ( input == 3 ) ltC(x, vliC(toString(y)))
+  else if ( input == 3 ) ltC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) ltC(vliC(toString(x)), y)
+  else if ( input == 6 ) ltC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -187,9 +187,9 @@ bininput = function(x, y){
 '>=.vli' <- function(x, y){
   input = bininput(x, y)
   if ( input == 2) geqC(x,y)
-  else if ( input == 3 ) geqC(x, vliC(toString(y)))
+  else if ( input == 3 ) geqC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) geqC(vliC(toString(x)), y)
+  else if ( input == 6 ) geqC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -200,9 +200,9 @@ bininput = function(x, y){
 '<=.vli' <- function(x, y){
   input = bininput(x, y)
   if ( input == 2) leqC(x, y)
-  else if ( input == 3) leqC(x, vliC(toString(y)))
+  else if ( input == 3) leqC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6) leqC(vliC(toString(x)), y)
+  else if ( input == 6) leqC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -213,9 +213,9 @@ bininput = function(x, y){
 '==.vli' <- function(x, y){
   input = bininput(x,y)
   if ( input == 2 ) eqC(x, y)
-  else if ( input == 3 ) eqC(x, vliC(toString(y)))
+  else if ( input == 3 ) eqC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) eqC(vliC(toString(x)), y)
+  else if ( input == 6 ) eqC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }
 
@@ -226,8 +226,8 @@ bininput = function(x, y){
 '!=.vli' <- function(x, y){
   input = bininput(x, y)
   if ( input == 2 ) neqC(x, y)
-  else if ( input == 3 ) neqC(x, vliC(toString(y)))
+  else if ( input == 3 ) neqC(x, vliC(toString(as.integer(y))))
   else if ( input == 4 | input == 5 ) stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
-  else if ( input == 6 ) neqC(vliC(toString(x)), y)
+  else if ( input == 6 ) neqC(vliC(toString(as.integer(x))), y)
   else if ( input == 7 | input == 8 ) stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
 }

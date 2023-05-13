@@ -60,12 +60,12 @@ Jacobi.default <- function(a, n) stop("Both arguments have to be passed as vli o
 #'
 Jacobi.numeric <- function(a, n){
   if ( abs(a) < 2147483648 ){
-    a = vliC(toString(a))
+    a = vliC(toString(as.integer(a)))
   }
   else stop("The first object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
       if ( is.even(n) | leqC(n, .pkgenv$zero)) stop("The Jacobi Symbol is only defined for positive odd values of n")
     }
     else stop("The second object passed as argument is neither a vli object nor a 32 bits integer")
@@ -80,7 +80,7 @@ Jacobi.numeric <- function(a, n){
 Jacobi.vli <- function(a, n){
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
       if ( is.even(n) | leqC(n, .pkgenv$zero) ) stop("The Jacobi Symbol is only defined for positive odd values of n")
     }
     else stop("The second object passed as argument is neither a vli object nor a 32 bits integer")

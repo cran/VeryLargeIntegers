@@ -38,10 +38,10 @@ binom.default <- function(n, k) stop("The x object passed as argument is neither
 #'
 binom.numeric <- function(n, k){
   if( (abs(n) < 2147483648) & (n > 0) ){
-    n = vliC(toString(n))
+    n = vliC(toString(as.integer(n)))
     if ( ltC(n, .pkgenv$one) ) stop("binom is only defined for positive integer values")
     if ( !is.vli(k) ){
-      if( (abs(k) < 2147483648) & (k > 0) ) k = vliC(toString(k))
+      if( (abs(k) < 2147483648) & (k > 0) ) k = vliC(toString(as.integer(k)))
       else stop("binom is only defined for positive integer values")
     }
     else if ( ltC(k, .pkgenv$one) ) stop("loge is only defined for positive integer values")
@@ -58,7 +58,7 @@ binom.numeric <- function(n, k){
 binom.vli <- function(n, k){
   if ( ltC(n, .pkgenv$one) ) stop("binom is only defined for positive integer values")
   if ( !is.vli(k) ){
-    if( (abs(k) < 2147483648) & (k > 0) ) k = vliC(toString(k))
+    if( (abs(k) < 2147483648) & (k > 0) ) k = vliC(toString(as.integer(k)))
     else stop("binom is only defined for positive integer values")
   }
   else if ( ltC(k, .pkgenv$one) ) stop("binom is only defined for positive integer values")

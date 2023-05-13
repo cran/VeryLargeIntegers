@@ -32,7 +32,7 @@ divp2.default = function(x, k) stop("x must be a 32 bits integer or a vli class 
 #'
 divp2.numeric = function(x, k){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.numeric(k) ) stop("The exponent k has to be a 32 bits integer number")

@@ -43,6 +43,12 @@ as.vli <- function(n) UseMethod("as.vli")
 as.vli.default <- function(n) stop("n argument must verify to be one of the next: 1) A character object containing only an integer number and (optionally) its sign; 2) A 32 bits integer number")
 
 #' @rdname vli
+#' @method as.vli vli
+#' @export as.vli vli
+#'
+as.vli.vli <- function(n) n
+
+#' @rdname vli
 #' @method as.vli character
 #' @export as.vli character
 #'
@@ -70,7 +76,7 @@ as.vli.character <- function(n){
 as.vli.numeric <- function(n){
   if ( abs(n) >= 2147483648 )
     stop("n argument must be either a character object containing only an integer number and (optionally) its sign or a 32 bits integer number")
-  vliC(toString(n))
+  vliC(toString(as.integer(n)))
 }
 
 

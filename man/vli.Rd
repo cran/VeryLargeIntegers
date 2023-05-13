@@ -4,6 +4,7 @@
 \alias{01. Basics}
 \alias{as.vli}
 \alias{as.vli.default}
+\alias{as.vli.vli}
 \alias{as.vli.character}
 \alias{as.vli.numeric}
 \alias{asnumeric}
@@ -19,6 +20,8 @@
 as.vli(n)
 
 \method{as.vli}{default}(n)
+
+\method{as.vli}{vli}(n)
 
 \method{as.vli}{character}(n)
 

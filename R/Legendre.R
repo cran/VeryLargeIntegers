@@ -39,12 +39,12 @@ Legendre.default <- function(n, p) stop("n and p have to be passed as vli object
 #'
 Legendre.numeric <- function(n, p){
   if ( abs(n) < 2147483648 ){
-    n = vliC(toString(n))
+    n = vliC(toString(as.integer(n)))
   }
   else stop("The n object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(p) ){
     if ( is.numeric(p) & (abs(p) < 2147483648) ){
-      p = vliC(toString(p))
+      p = vliC(toString(as.integer(p)))
     }
     else stop("The p object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -59,7 +59,7 @@ Legendre.numeric <- function(n, p){
 Legendre.vli <- function(n, p){
   if ( !is.vli(p) ){
     if ( is.numeric(p) & (abs(p) < 2147483648) ){
-      p = vliC(toString(p))
+      p = vliC(toString(as.integer(p)))
     }
     else stop("The p object passed as argument is neither a vli object nor a 32 bits integer")
   }

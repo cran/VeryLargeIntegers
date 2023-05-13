@@ -69,7 +69,7 @@ is.primeF.default <- function(x, iter=10) stop("x has to be specified as a vli o
 #'
 is.primeF.numeric <- function(x, iter=10){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( is.numeric(iter) ){
@@ -146,7 +146,7 @@ is.primeMR.default <- function(x, iter=10) stop("x has to be specified as a vli 
 #'
 is.primeMR.numeric <- function(x, iter=10){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( is.numeric(iter) ){
@@ -203,7 +203,7 @@ is.primeSS.default <- function(x, iter=10) stop ("x has to be specified as a vli
 #'
 is.primeSS.numeric <- function(x, iter=10){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( is.numeric(iter) ){

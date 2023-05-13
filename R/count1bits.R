@@ -27,7 +27,7 @@ count1bits.default <- function(x) stop("The object passed as argument is neither
 #'
 count1bits.numeric <- function(x){
   if ( is.numeric(x) & (abs(x) < 2147483648) ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The object passed as argument is neither a vli object nor a 32 bits integer")
   onebitsC(x)

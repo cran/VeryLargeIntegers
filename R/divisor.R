@@ -49,7 +49,7 @@ divisor.default <- function(n, iter=100) stop("n has to be specified as a vli ob
 #'
 divisor.numeric <- function(n, iter=100){
   if ( abs(n) < 2147483648 ){
-    n = vliC(toString(n))
+    n = vliC(toString(as.integer(n)))
   }
   else stop("The n object passed as argument is neither a vli object nor a 32 bits integer")
   if ( is.numeric(iter) ){

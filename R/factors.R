@@ -4,7 +4,7 @@
 
 # not for the user
 factorsbase <- function(n, iter, output){
-  if ( is.primeMRbase(n, iter) ) return(n)
+  if ( is.primeMRbase(n, iter) ) return(list(n))
   out = c(noquote("0"))
   tot = .pkgenv$one
   x = n
@@ -59,7 +59,7 @@ factors.default <- function(n, iter=10, output="print") stop("n has to be specif
 #'
 factors.numeric <- function(n, iter=10, output="print"){
   if ( abs(n) < 2147483648 ){
-    n = vliC(toString(n))
+    n = vliC(format(n, scientific=F))
   }
   else stop("The n object passed as argument is neither a vli object nor a 32 bits integer")
   if ( is.numeric(iter) ){

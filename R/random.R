@@ -58,12 +58,12 @@ rvliunif.default <- function(x, y) stop("The x object passed as argument is neit
 #'
 rvliunif.numeric <- function(x, y){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -78,7 +78,7 @@ rvliunif.numeric <- function(x, y){
 rvliunif.vli <- function(x, y){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -104,7 +104,7 @@ rvlibinbase <- function(n, p){
         if ( runif(1) < p ) sum = as.integer(sum + 1)
       }
       if ( sum > 2147470000 ){
-        out = sumC(out, vliC(toString(sum)))
+        out = sumC(out, vliC(toString(as.integer(sum))))
         sum = 0
       }
     }
@@ -114,7 +114,7 @@ rvlibinbase <- function(n, p){
       if ( runif(1) < p ) sum = sum + 1
     }
   }
-  sumC(out, vliC(toString(sum)))
+  sumC(out, vliC(toString(as.integer(sum))))
 }
 
 #' @param n number of independent Bernoulli trials; object of class vli 32 bits integer
@@ -138,7 +138,7 @@ rvlibin.default <- function(n, p) stop("The number of independent Bernoulli tria
 #'
 rvlibin.numeric <- function(n, p){
   if ( (n < 2147483648) & (n > 0) ){
-    n = vliC(toString(n))
+    n = vliC(toString(as.integer(n)))
   }
   else stop("The number of independent Bernoulli trials, n, has to be a vli object or a 32 bits integer with value greater than zero")
 
@@ -200,7 +200,7 @@ rvlinegbin.default <- function(s, p) stop("The number of successes, s, has to be
 #'
 rvlinegbin.numeric <- function(s, p){
   if ( (s < 2147483648) & (s > 0) ){
-    s = vliC(toString(s))
+    s = vliC(toString(as.integer(s)))
   }
   else stop("The number of successes, s, has to be a vli object or a 32 bits integer with value greater than zero")
 
@@ -274,7 +274,7 @@ rvliprime.default <- function(y, iter=10, test='MR') stop("The object y passed a
 rvliprime.numeric <- function(y, iter=10, test='MR'){
   if ( abs(y) < 2147483648 ){
     if ( y > 1 ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("y has to be greater than one")
   }

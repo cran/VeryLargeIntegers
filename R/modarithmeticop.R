@@ -41,17 +41,17 @@ summod.default <- function(x, y, mod) stop ("x, y and mod have to be specified a
 #' @export summod numeric
 #'
 summod.numeric <- function(x, y, mod){
-  if ( abs(x) < 2147483648 ) x = vliC(toString(x))
+  if ( abs(x) < 2147483648 ) x = vliC(toString(as.integer(x)))
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -66,13 +66,13 @@ summod.numeric <- function(x, y, mod){
 summod.vli <- function(x, y, mod){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -99,17 +99,17 @@ submod.default <- function(x, y, mod) stop ("x, y and mod have to be specified a
 #' @export submod numeric
 #'
 submod.numeric <- function(x, y, mod){
-  if ( abs(x) < 2147483648 ) x = vliC(toString(x))
+  if ( abs(x) < 2147483648 ) x = vliC(toString(as.integer(x)))
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -124,13 +124,13 @@ submod.numeric <- function(x, y, mod){
 submod.vli <- function(x, y, mod){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -168,18 +168,18 @@ mulmod.default <- function(x, y, mod) stop("x, y and mod have to be specified as
 #'
 mulmod.numeric <- function(x, y, mod){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -194,13 +194,13 @@ mulmod.numeric <- function(x, y, mod){
 mulmod.vli <- function(x, y, mod){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -249,18 +249,18 @@ powmod.default <- function(x, n, mod) stop("x, y and mod have to be specified as
 #'
 powmod.numeric <- function(x, n, mod){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -275,13 +275,13 @@ powmod.numeric <- function(x, n, mod){
 powmod.vli <- function(x, n, mod){
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
-      n = vliC(toString(n))
+      n = vliC(toString(as.integer(n)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -319,7 +319,7 @@ invmod.default <- function(x, n) stop("x and n have to be specified as vli objec
 invmod.numeric <- function(x, n){
   if ( abs(x) < 2147483648 ){
     if ( x >= 0 ){
-      x = vliC(toString(x))
+      x = vliC(toString(as.integer(x)))
     }
     else stop("invmod is only defined for positive integer numbers")
   }
@@ -327,7 +327,7 @@ invmod.numeric <- function(x, n){
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
       if ( n >= 0 ){
-        n = vliC(toString(n))
+        n = vliC(toString(as.integer(n)))
       }
       else stop("invmod is only defined for positive integer numbers")
     }
@@ -347,7 +347,7 @@ invmod.vli <- function(x, n){
   if ( !is.vli(n) ){
     if ( is.numeric(n) & (abs(n) < 2147483648) ){
       if ( n >= 0 ){
-        n = vliC(toString(n))
+        n = vliC(toString(as.integer(n)))
       }
       else stop("invmod is only defined for positive integer numbers")
     }
@@ -387,18 +387,18 @@ divmod.default <- function(x, y, mod) stop("x, y and mod have to be specified as
 #'
 divmod.numeric <- function(x, y, mod){
   if ( abs(x) < 2147483648 ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
   }
   else stop("The x object passed as argument is neither a vli object nor a 32 bits integer")
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }
@@ -413,13 +413,13 @@ divmod.numeric <- function(x, y, mod){
 divmod.vli <- function(x, y, mod){
   if ( !is.vli(y) ){
     if ( is.numeric(y) & (abs(y) < 2147483648) ){
-      y = vliC(toString(y))
+      y = vliC(toString(as.integer(y)))
     }
     else stop("The y object passed as argument is neither a vli object nor a 32 bits integer")
   }
   if ( !is.vli(mod) ){
     if ( is.numeric(mod) & (abs(mod) < 2147483648) ){
-      mod = vliC(toString(mod))
+      mod = vliC(toString(as.integer(mod)))
     }
     else stop("The mod object passed as argument is neither a vli object nor a 32 bits integer")
   }

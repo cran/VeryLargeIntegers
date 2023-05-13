@@ -30,7 +30,7 @@ factvli.default <- function(n) stop("The n object passed as argument is neither 
 #'
 factvli.numeric <- function(n){
   if( (abs(n) < 2147483648) ){
-    if ( n > 0 ) n = vliC(toString(n))
+    if ( n > 0 ) n = vliC(toString(as.integer(n)))
     else stop("factvli is only defined for positive integer numbers")
   }
   else stop("The n object passed as argument is neither a vli object nor a 32 bits integer")

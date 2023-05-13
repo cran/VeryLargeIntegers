@@ -45,7 +45,7 @@ sqrtrem.default = function(x) stop("The x object passed as argument is neither a
 #'
 sqrtrem.numeric = function(x){
   if ( (abs(x) < 2147483648) & (x >= 0) ){
-    x = vliC(toString(x))
+    x = vliC(toString(as.integer(x)))
     rootC(x)[[2]]
   }
   else  stop("sqrtrem is only defined for positive integer numbers")
@@ -84,7 +84,7 @@ rootk.numeric = function(x, k){
   if ( !is.vli(k) ){
     if ( is.numeric(k) & (abs(k) < 2147483648) ){
       if ( k > 0 ){
-        k = vliC(toString(k))
+        k = vliC(toString(as.integer(k)))
       }
       else stop("rootk is only defined for positive integer values of k")
     }
@@ -96,11 +96,11 @@ rootk.numeric = function(x, k){
   s = 1
   if ( abs(x) < 2147483648 ){
     if ( x >= 0 ){
-      x = vliC(toString(x))
+      x = vliC(toString(as.integer(x)))
     }
     else {
       if ( is.even(k) ) stop("rootk is only defined for positive integer numbers when k is even")
-      else {s = -1; x = vliC(toString(x)); x$sign=1}
+      else {s = -1; x = vliC(toString(as.integer(x))); x$sign=1}
     }
   }
   else stop("x argument is neither a vli object nor a 32 bits integer")
@@ -119,7 +119,7 @@ rootk.vli = function(x, k){
   if ( !is.vli(k) ){
     if ( is.numeric(k) & (abs(k) < 2147483648) ){
       if ( k > 0 ){
-        k = vliC(toString(k))
+        k = vliC(toString(as.integer(k)))
       }
       else stop("rootk is only defined for positive integer values of k")
     }
@@ -158,7 +158,7 @@ rootkrem.numeric = function(x, k){
   if ( !is.vli(k) ){
     if ( is.numeric(k) & (abs(k) < 2147483648) ){
       if ( k > 0 ){
-        k = vliC(toString(k))
+        k = vliC(toString(as.integer(k)))
       }
       else stop("rootkrem is only defined for positive integer values of k")
     }
@@ -170,11 +170,11 @@ rootkrem.numeric = function(x, k){
   s = 1
   if ( abs(x) < 2147483648 ){
     if ( x >= 0 ){
-      x = vliC(toString(x))
+      x = vliC(toString(as.integer(x)))
     }
     else {
       if ( is.even(k) ) stop("rootkrem is only defined for positive integer numbers when k is even")
-      else {s = -1; x = vliC(toString(x)); x$sign=1}
+      else {s = -1; x = vliC(toString(as.integer(x))); x$sign=1}
     }
   }
   else stop("x argument is neither a vli object nor a 32 bits integer")
@@ -193,7 +193,7 @@ rootkrem.vli = function(x, k){
   if ( !is.vli(k) ){
     if ( is.numeric(k) & (abs(k) < 2147483648) ){
       if ( k > 0 ){
-        k = vliC(toString(k))
+        k = vliC(toString(as.integer(k)))
       }
       else stop("rootkrem is only defined for positive integer values of k")
     }

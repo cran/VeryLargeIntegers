@@ -51,7 +51,7 @@ phi.default <- function(x) stop("The object passed as argument is neither a vli 
 phi.numeric <- function(x){
   if ( abs(x) < 2147483648 ){
     if ( x >= 0 ){
-      x = vliC(toString(x))
+      x = vliC(toString(as.integer(x)))
     }
     else stop("x has to be a positive integer")
   }
